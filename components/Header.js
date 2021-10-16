@@ -1,10 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import { HeartIcon, HomeIcon, MenuIcon, PaperAirplaneIcon, PlusCircleIcon, UserGroupIcon } from '@heroicons/react/solid'
+import { useSession } from 'next-auth/client';
 
 export default function Header() {
 
     const loggedIn = false;
+    const {data:session} = useSession();
+
     return (
 
             <div class="border-b px-4 py-2 bg-white shadow-sm">
